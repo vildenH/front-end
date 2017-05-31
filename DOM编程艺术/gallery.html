@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/layout.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="images/1.jpg" title="A fireworks display" onclick="showPic(this);return false;">Fireworks</a>
+        </li>
+        <li>
+            <a href="images/2.jpg" title="A cup of coffee" onclick="showPic(this);return false;">Coffee</a>
+        </li>
+        <li>
+            <a href="images/3.jpg" title="A Rose" onclick="showPic(this);return false;">Rose</a>
+        </li>
+        <li>
+            <a href="images/4.jpg" title="A Big ben" onclick="showPic(this);return false;">Big ben</a>
+        </li>
+
+    </ul>
+    <img id="placeholder" alt="my image gallery" />
+    <p id="description">Choose an image.</p>
+</body>
+<script>
+    function showPic(whichpic) {
+        var source = whichpic.getAttribute("href");
+        var text = whichpic.getAttribute("title");
+        var placeholder = document.getElementById("placeholder");
+        var description = document.getElementById("description");
+        placeholder.setAttribute("src", source);
+        description.firstChild.nodeValue = text;
+
+    }
+
+    function countBodyChildren() {
+        var body_element = document.getElementsByTagName("body")[0];
+        alert(body_element.childNodes.length);
+        alert(body_element.nodeType);
+    }
+    //window.onload = countBodyChildren;
+</script>
+
+</html>
