@@ -1,0 +1,15 @@
+div#navigation a {
+    display: block;
+}
+
+#rollcall li {
+    display: inline;
+    border-right: 1px solid;
+    padding: 0.33em;
+}
+
+p {
+    padding: 10%;
+    background-color: silver;
+    
+}

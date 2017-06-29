@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/layout.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul id="imagegallery">
+        <li>
+            <a href="images/1.jpg" title="A fireworks display"><img src="images/1.jpg"></a>
+        </li>
+        <li>
+            <a href="images/2.jpg" title="A cup of coffee"><img src="images/2.jpg"></a>
+        </li>
+        <li>
+            <a href="images/3.jpg" title="A Rose"><img src="images/3.jpg"></a>
+        </li>
+        <li>
+            <a href="images/4.jpg" title="A Big ben"><img src="images/4.jpg"></a>
+        </li>
+
+    </ul>
+    <img id="placeholder" alt="my image gallery" />
+    <p id="description">Choose an image.</p>
+</body>
+<script>
+    function showPic(whichpic) {
+        var source = whichpic.getAttribute("href");
+        var text = whichpic.getAttribute("title");
+        var placeholder = document.getElementById("placeholder");
+        var description = document.getElementById("description");
+        placeholder.setAttribute("src", source);
+        description.firstChild.nodeValue = text;
+
+    }
+
+    function countBodyChildren() {
+        var body_element = document.getElementsByTagName("body")[0];
+        alert(body_element.childNodes.length);
+        alert(body_element.nodeType);
+    }
+
+    function prepareGallery() {
+        if (!document.getElementById) return false;
+        if (!document.getElementsByTagName) return false;
+
+        var gallery = document.getElementById("imagegallery");
+        var links = gallery.getElementsByTagName("a");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].onclick = function () {
+                showPic(this);
+                return false;
+
+            }
+        }
+
+    }
+
+    function addLoadEvent(func) {
+        var oldFun = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                oldFun();
+                func();
+            }
+        }
+    }
+    addLoadEvent(prepareGallery);
+
+
+    //window.onload = prepareGallery; //单个函数在网页加载时运行
+    /*
+    以上方法无法在多个函数同时在页面加载时执行
+    window.onload=firstFun()
+    window.onload=secondFun()
+
+
+    可以使用如下方法使多个函数得到执行
+    window.onload=function(){
+        firstFun();
+        secondFun();
+    }
+    但是当更多函数需要执行的时候这种方法显得不太方便可以自己编写一个函数，以弹性的方式向windows.onload里添加要执行的函数
+    
+    见function addLoadEvent(func)
+
+
+    */
+    //window.onload = countBodyChildren;
+</script>
+
+</html>
