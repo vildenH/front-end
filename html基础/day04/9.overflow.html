@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            border:1px solid red;
+            overflow:auto;
+            /*visibility:hidden;*/
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        超出隐藏：overflow:hidden
+        超出显示滚动条:overflow:scroll;
+        overflow:auto 如果超出就显示滚动条，没超就正常显示
+
+     -->
+    <div id="box">
+        <img src="../day01/sucai/image/mv.jpg" alt="" width='300px'>
+    </div>
+
+    <h1>消失了，坑还在！visibility:hidden;</h1>
+    <h1>消失了，坑不在了！display:none</h1>
+</body>
+</html>

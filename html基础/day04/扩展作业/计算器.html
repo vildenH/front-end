@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+		/*通用样式*/
+		ul li{list-style-type: none;}
+		.fl,.f2,.f3{float: left;}
+		.fr{float: right;}
+		body,div{
+			padding:0px;
+			margin:0px;
+		}
+		.cl{clear: both;}
+		/*计算器主体*/
+		#min{width:230px;
+			height:320px;
+			border:1px solid #5886C9;
+			border-radius:3px;
+		}
+		#min_top{
+			height:25px;
+			background-color: #5886C9;
+			padding:0px 5px;
+
+		}
+		#min_but{
+			background:#D9E4F1;
+			height:290px;
+			border:3px solid #5886C9;
+		}
+		#logo{
+			padding-left: 20px;
+			line-height: 25px;
+			font-size:13px;
+			height:22px;
+			background: url(./image/logo.png) -1px 4px no-repeat;
+		}
+
+		#buttom .f1{
+			width:30px;
+			height:20px;
+			background: url(./image/1.png) -2px -1px no-repeat;
+		}
+		#buttom .f2{
+			width:27px;
+			height:20px;
+			background: url(./image/2.png) -2px -1px no-repeat;
+		}
+		#buttom .f3{
+			width:45px;
+			height:19px;
+			background: url(./image/3.png) -2px -1px no-repeat;
+		}
+
+		#alt{
+			height:20px;
+			background-color:#D6DDEF;
+			border-bottom: 1px solid #B6BCCC;
+		}
+		#main{
+			padding:12px;
+		}
+		#main input{
+			width:180px;
+			height:40px;
+			border: 1px solid #8E9CAD;
+			border-radius:2px;
+			text-align: right;
+			padding: 5px;
+			font-weight: blod;
+			font-size: 20px;
+
+		}
+		#main_but{
+			margin-top:5px;
+			width:196px;/*190+3+3*/
+		}
+		#alt div{
+			width:50px;
+			border:1px solid #B6BCCC;
+			border-radius:3px;
+			margin: 2px 1px;
+			font-size: 12px;
+		}
+		#alt div:hover{
+			border:1px solid #FFDC88;
+		}
+		#main_but .but{
+			float:left;
+			width:33px;
+			height: 26px;
+			line-height: 26px;
+			margin:2px;
+			border:1px solid #8E9CAD;
+			border-radius:2px;
+			font-size:16px;
+		}
+		#main_but .but:hover{
+			border:1px solid #FFDC88;
+			background:#FFFD36;
+		}
+		#main_but .etc{
+			height:59px;
+			line-height: 59px;
+			font-size: 28px;
+		}
+		#main .zero{
+			width:72px;
+		}
+
+		/*菜单栏的效果*/
+
+		</style>
+</head>
+<body>
+	<center>
+		<h1>超级计算器</h1>
+		<div id="min">
+			<div id="min_top">
+				<div class="fl" id="logo">计算器</div>
+				<div class="fr" id="buttom">
+					<div class="fl"></div>
+					<div class="f2"></div>
+					<div class="f3"></div>
+				</div>
+			</div>
+			<div id="min_but">
+				<!-- 这里是菜单栏 -->
+				<div id="alt">
+					<div class="fl">查看(V)
+
+					</div>
+					<div class="fl">编辑(E)</div>
+					<div class="fl">帮助(H)</div>
+				</div>
+				<!-- 这里是主体 -->
+				<div id="main">
+					<input type="text" value="12">
+					<!-- 按钮部分 -->
+					<div id="main_but">
+						<!--  第一行 -->
+						<div class="but">MC</div>
+						<div class="but">MR</div>
+						<div class="but">MS</div>
+						<div class="but">M+</div>
+						<div class="but">M-</div>
+						<div clsss="cl"></div>
+
+						<!--  第二行 -->
+						<div class="but">←</div>
+						<div class="but">CE</div>
+						<div class="but">C</div>
+						<div class="but">±</div>
+						<div class="but">√</div>
+						<div clsss="cl"></div>
+
+						<!--  第三行 -->
+						<div class="but">7</div>
+						<div class="but">8</div>
+						<div class="but">9</div>
+						<div class="but">／</div>
+						<div class="but">％</div>
+						<div clsss="cl"></div>
+
+						<!--  第四行 -->
+						<div class="but">4</div>
+						<div class="but">5</div>
+						<div class="but">6</div>
+						<div class="but">*</div>
+						<div class="but" style="font-size:12px;">1/χ</div>
+						<div clsss="cl"></div>
+
+						<!--  最下 -->
+						<div class="fl" style="width:156px">
+
+							<div class="but">1</div>
+							<div class="but">2</div>
+							<div class="but">3</div>
+							<div class="but">-</div>
+							<!-- <div clsss="cl"></div> -->
+								<!-- 按键0 -->
+							<div class="but zero">0</div>
+
+							<div class="but">.</div>
+							<div class="but">+</div>
+						</div>
+							<!-- 等号 -->
+						<div class="but etc fl">=</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+</body>
+</html>
+
+<script>
+
+
+</script>

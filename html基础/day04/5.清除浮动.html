@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            background:red;
+            float:right;
+        }
+
+        ul{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">这是一个盒子</div>
+    <b>123</b>
+
+    <div style="clear:both"></div>
+
+    <div style="border:1px solid red; float:left; height:80px;">hello world</div>
+
+    <ul style="border:1px solid purple;">
+        <li>前女友送了我一把伞</li>
+        <li>你若不举，便是晴天</li>
+    </ul>
+
+    <!-- 清除浮动 -->
+    <div style="clear:both;"></div>
+
+    <div style="background:pink; width:100px; height:100px;">box</div>
+</body>
+</html>

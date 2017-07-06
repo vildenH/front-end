@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素和行内元素之间的转换</title>
+    <style>
+        div,a:hover{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div style="border:1px solid red;display:inline;width:800px;">块级元素转换成行内元素</div>
+
+    <b style="border:1px solid green;display:block; width:800px;">行内元素</b>
+
+    <div style="display:none;">display:none可以使元素隐藏起来</div>
+
+    <div id="box1">显示隐藏的div</div>
+    <div id="box" style="border:1px solid gray;display:none;" >这是一个隐藏的div</div>
+
+    <div style="border:1px solid red; display:inline-block; width:600px; ">屁股大，因为吃了鸡蛋多</div>
+</body>
+<script>
+    var box = document.getElementById('box');
+    var box1 = document.getElementById('box1');
+
+    /* 鼠标移入事件 */
+    box1.onmousemove = function(){
+        box.style.display = 'block';
+    }
+
+    /* 鼠标移出事件 */
+    box1.onmouseout = function(){
+        box.style.display = 'none';
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区块定位</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background:green;">d1</div>
+    <div style="background:pink; float:left;">d2</div>
+    <div style="background:blue; position:absolute; top:60px; left:30px;">d3</div>
+
+    <div style="background:blue; position:absolute; right:60px; bottom:30px;">d4</div>
+
+    <!--
+        position:absolute
+        1.绝对定位，围绕body,左上角（右下角）0,0
+        2.会覆盖浮动
+        3.position不会用来布局，一般用于js特效
+
+     -->
+</body>
+</html>

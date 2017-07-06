@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素跟行内元素</title>
+    <style>
+        div,a,b{
+            height:30px;
+            border:1px solid red;
+            width:500px;
+            line-height:30px;
+            padding:20px;
+            margin:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        son
+    </div>
+    <div></div>
+    <a href="">百度</a><b>好粗啊</b>
+
+    <!-- 行内元素只能套文本跟行内元素 -->
+    <b><div>好粗啊</div></b>
+    <b><i>好斜啊</i></b>
+
+    <hr>
+
+    <div style="height:100px; width:800px;">
+        <strong>过年了</strong>,祝你不育不孕，早生贵子
+        <div>死鬼，怎么说话的你</div>
+    </div>
+
+    <hr>
+    <p style="border:1px solid red;height:40px;">
+        <a href="">行内元素</a>
+        <p>屁不能套屁</p>
+        <div style="border:1px solid green; height:30px;">众里寻他千百度，那人就在你旁边</div>
+    </p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        #yeye,#baba,#son,#box1,#box2,#box3{
+            width:100px;
+            height:100px;
+        }
+
+        #box1{
+            background:blue;
+            position:absolute;
+            right:30px;
+            bottom:50px;
+        }
+
+        #box2{
+            background:pink;
+            position:absolute;
+            right:30px;
+            bottom:50px;
+        }
+
+        #box3{
+            background:orange;
+            position:absolute;
+            right:30px;
+            bottom:50px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        相对定位 position：relative
+        相对于爸爸
+     -->
+    <div id="yeye" style="background:red; position:relative; top:30px;left:50px;" >
+        <div id="baba" style="background:green;position:relative; top:30px;left:50px;">
+            <div id="son" style="background:blue; position:relative; top:30px;left:50px;"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- z-index 设置元素显示的优先级 可以是负数 但必须是整数 -->
+    <div id="box1" style="z-index:-2;"></div>
+    <div id="box2" style="z-index:-1;"></div>
+    <div id="box3" style="z-index:-4;"></div>
+
+</body>
+</html>

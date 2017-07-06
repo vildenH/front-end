@@ -1,0 +1,94 @@
+一       DIV+CSS布局优势
+        ①   表现和内容分离
+        ②   代码简洁，提高代码解析速度
+        ③   易于维护和改版
+        ④   提高搜索引擎对网页的搜索效率
+
+二       布局相关概念
+        1. 盒子模型
+            1.1 定义： 任何一个元素都可以抽象一个盒子模型， 盒子里面可以嵌套盒子
+            (和定义一个盒子,又如何去拜访盒子布局页面,通常我们使用"无意义"
+                的标签<div>定义一个盒子模型,再通过css属性去声明盒子模型的属性.
+            )
+            1.2 组成： 内容   内补白（填充）  边框   外补白（边距）
+            1.3 相关属性：
+                   width  height
+                   border
+                   padding      盒子的边框距离盒子的内容的距离
+                   margin       盒子的边框距离上一个盒子或父元素的距离
+            1.4 盒子模型的宽高
+                 盒子的宽 = 内容的宽 + 左右内补白+左右边框
+
+        2.  块级元素和行内元素
+            2.1.    块级元素   块状元素
+                ①总是在新行上开始；
+                ②高度，行高以及外边距和内边距都可控制；
+                ③宽度缺省是它的容器的100%，除非设定一个宽度。
+                ④它可以容纳内联元素和其他块元素
+            2.2.    行内元素    内联元素
+                ①   和其他元素都在一行上
+                ②   宽 高 行高 不可设置， padding可以设置 margin可以设置左右，不能上下
+                ③   宽只与内容有关系
+                ④   只可以容纳文本或其他行内元素
+            2.3 块级和行内的相互转换
+                属性   display
+                值     block inline inline-block  none
+        3. 无意义的块级元素div 和 无意义的行内元素span
+                div
+                span
+        4. 盒子区块的浮动
+            浮动的盒子脱离文档流
+            设置元素的css float属性  left  right
+            clear属性可以清除浮动  left  right  both
+        5.盒子区块的定位
+            定位的元素脱离文档流
+            属性  position
+            绝对定位： 相对于自己原先的位置定位， 配合left  top   right  bottom
+                        不影响其他元素的布局
+            相对定位： 相对于定位的父元素,如果父元素没定位，向上找,直到找到定位的父元素，如果没有定位的父元素，相对于body
+                                影响其他元素的布局
+
+            z-index属性： z-index用于定位的元素 设置元素显示优先级， 默认0  越大优先级越高  可以有负值
+
+            fixed
+三       布局相关的属性
+        1.  尺寸
+            width           设置内容的宽
+            height          设置内容的高
+        2.  外补白
+            margin                          简写 同padding
+            margin-top                      距离上边的边距
+            margin-right                    右边
+            margin-bottom                   下边
+            margin-left                     左边
+        3. 内补白
+            padding
+                padding: 四边
+                padding: 上下  左右
+                padding: 上 左 右 下
+                padding: 上 右 下 左
+            padding-top                             上边内补白
+            padding-right                               右边
+            padding-bottom                      下边
+            padding-left                                左边
+        4.  布局
+            display     设置元素的显示方式     值 block以块级元素显示    inline以行内元素显示    none：不显示    inline-block:(IE6、7不支持， 介于inline和block之间的状态)
+            visibility
+            overflow
+            float           设置浮动方式      值 left    right       none
+            clear           清除浮动                值  left   right      both(重用)
+        5. 定位
+            position
+            left
+            right
+            top
+            bottom
+            z-index
+            float
+四       布局设计
+        1.  居中
+        2.  浮动布局
+            2.1 两列浮动
+            2.2 三列浮动
+
+
