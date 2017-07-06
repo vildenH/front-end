@@ -4,7 +4,7 @@ class Circle {
         this.x = x;
         this.y = y;
         this.r = Math.random() * 14 + 1;
-        this._mx = Math.random * 2 - 1;
+        this._mx = Math.random() * 2 - 1;
         this._my = Math.random() * 2 - 1;
 
     }
@@ -24,7 +24,7 @@ class Circle {
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(_circle.x, _circle.y);
-            ctx.closePath;
+            ctx.closePath();
             ctx.strokeStyle = 'rgba(204, 204, 204, 0.1)';
             ctx.stroke();
         }
