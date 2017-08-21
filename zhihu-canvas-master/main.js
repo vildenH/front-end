@@ -1,5 +1,7 @@
 class Circle{
-
+	//x,y为坐标
+	//r为半径
+	//mx,my为小球移动速度
 	constructor(x, y) {
 		this.x = x;
 		this.y = y;
