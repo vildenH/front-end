@@ -17,6 +17,10 @@ play_with_pets();
 console.log(pet);
 
 //这主要是Js中没有用var声明的变量都是全局变量，而且是顶层对象的属性。
+//相当于 
+// var a = 3;
+// b = 3;
+//相当于控制上层作用域的变量
 var a, b;
 (function () {
     console.log(a);
